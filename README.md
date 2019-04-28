@@ -1,2 +1,2 @@
 # LearningSometingNew
-学习用
+为了学习各种各样的东西而建立的项目
