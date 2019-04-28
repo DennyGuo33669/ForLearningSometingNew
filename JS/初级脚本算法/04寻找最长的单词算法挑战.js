@@ -6,8 +6,6 @@
 
 // 当你完成不了挑战的时候，可以点击'求助'。
 
-
-
 // 你可能需要用到以下链接:
 
 // String.prototype.split()
@@ -22,17 +20,15 @@
 // findLongestWord("What is the average airspeed velocity of an unladen swallow") 应该返回 8.
 // findLongestWord("What if we try a super-long word such as otorhinolaryngology") 应该返回 19.
 
-function findLongestWord(str) {
-    var a = str.split(' ');
-    var max = 0;
-    for (var i = 0; i < a.length; i++) {
-
-        if (max < a[i].length) {
-            max = a[i].length
-        }
+function findLongestWord (str) {
+  var a = str.split(' ')
+  var max = 0
+  for (var i = 0; i < a.length; i++) {
+    if (max < a[i].length) {
+      max = a[i].length
     }
-
-    return max;
+  }
+  return max
 }
 
-findLongestWord("The quick brown fox jumped over the lazy dog");
+console.log(findLongestWord('The quick brown fox jumped over the lazy dog'))
