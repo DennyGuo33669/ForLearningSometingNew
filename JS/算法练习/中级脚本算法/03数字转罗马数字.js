@@ -53,4 +53,4 @@ function convert (num) {
   return str.toUpperCase()
 }
 
-console.log(convert(4001))
+console.log(convert(36))
