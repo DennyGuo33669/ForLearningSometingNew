@@ -8,7 +8,7 @@ import json
 def get_ip_information(ip):
     # url='http://api.map.baidu.com/highacciploc/v1?qcip='+ip+'&qterm=pc&ak='你的密钥（AK）'&coord=bd09ll&extensions=3'
     url='http://api.map.baidu.com/highacciploc/v1?qcip='+ip+'&qterm=pc&ak=StCgOveZOi0t8llbntO0V9EIu4PM8j6N&coord=bd09ll&extensions=3'
-    poiss=''
+    pois=''
     request = urllib.request.Request(url)
     page = urllib.request.urlopen(request, timeout=10)
     data_json = page.read()
