@@ -27,5 +27,10 @@
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0"
+  },
+  "dependencies": {
+    "express": "^4.17.0",
+    "lodash": "^4.17.11",
+    "utility": "^1.16.1"
   }
 }
