@@ -1,7 +1,25 @@
-body{
-    font-family: "PingFang SC", "Hiragino Sans GB", Helvetica, Arial, sans-serif;
+body {
+  font-family: "PingFang SC", "Hiragino Sans GB", Helvetica, Arial, sans-serif;
+
 }
-h1{
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: #63B8FF;
-    font-family: "PingFang SC", "Hiragino Sans GB", Helvetica, Arial, sans-serif;
+}
+
+code {
+    color: #e96900;
+}
+
+strong {
+    color: #e66161;
+    /* font-size: 15px; */
+}
+em {
+    color: #108f36;
 }
