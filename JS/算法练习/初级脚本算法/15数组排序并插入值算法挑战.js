@@ -23,17 +23,17 @@
 
 function where (arr, num) {
   // Find my place in this sorted array.
-  var n
+  var n;
   /* if (arr.indexOf(num) == -1){
          arr.push(num);
     }
     */
-  arr.push(num)
-  arr.sort((a, b) => a - b)
+  arr.push(num);
+  arr.sort((a, b) => a - b);
 
-  n = arr.indexOf(num)
+  n = arr.indexOf(num);
 
-  return n
+  return n;
 }
 
-console.log(where([3, 10, 5, 1], 3))
+console.log(where([3, 10, 5, 1], 3));

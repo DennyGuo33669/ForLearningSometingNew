@@ -23,7 +23,7 @@ function reverseString (str) {
   // var a = str.split('');
   // var b = a.reverse();
   // var c = b.join('');
-  return str.split('').reverse().join('')
+  return str.split('').reverse().join('');
 }
 
-console.log(reverseString('hello'))
+console.log(reverseString('hello'));

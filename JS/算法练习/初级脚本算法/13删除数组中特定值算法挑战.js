@@ -19,9 +19,9 @@ function bouncer (arr) {
   // Don't show a false ID to this bouncer.
   return arr.filter(function (val) {
     // return arr.indexOf("false")>0;
-    return val
-  })
+    return val;
+  });
   // return arr;
 }
 
-console.log(bouncer([7, 'ate', '', false, 9, undefined]))
+console.log(bouncer([7, 'ate', '', false, 9, undefined]));

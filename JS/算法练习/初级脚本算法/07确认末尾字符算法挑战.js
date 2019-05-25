@@ -39,8 +39,8 @@ function confirmEnding (str, target) {
   */
   // var s = /.*"+target+"$/;
   // var s=eval("/.*"+target+"$/");
-  var re = new RegExp('.*' + target + '$')
-  return re.test(str)
+  var re = new RegExp('.*' + target + '$');
+  return re.test(str);
 }
 
-console.log(confirmEnding('Bastian', 'n'))
+console.log(confirmEnding('Bastian', 'n'));

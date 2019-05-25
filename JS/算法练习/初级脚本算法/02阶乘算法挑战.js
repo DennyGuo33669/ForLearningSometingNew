@@ -19,10 +19,10 @@
 // factorialize(0) 应该返回 1.
 
 function factorialize (num) {
-  var sum = 1
+  var sum = 1;
   for (var i = 1; i <= num; i++) {
-    sum *= i
+    sum *= i;
   }
-  return sum
+  return sum;
 }
-console.log(factorialize(5))
+console.log(factorialize(5));

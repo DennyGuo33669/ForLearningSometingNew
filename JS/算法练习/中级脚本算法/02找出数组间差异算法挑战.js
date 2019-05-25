@@ -13,10 +13,10 @@
 //     Array.prototype.concat()
 
 function diff (arr1, arr2) {
-  var newArr1 = arr1.filter((a) => arr2.indexOf(a) === -1)
-  var newArr2 = arr2.filter((a) => arr1.indexOf(a) === -1)
+  var newArr1 = arr1.filter((a) => arr2.indexOf(a) === -1);
+  var newArr2 = arr2.filter((a) => arr1.indexOf(a) === -1);
 
-  return newArr1.concat(newArr2)
+  return newArr1.concat(newArr2);
 }
 // eslint-disable-next-line no-console
-console.log(diff(['andesite', 'grass', 'dirt', 'pink wool', 'dead shrub'], ['diorite', 'andesite', 'grass', 'dirt', 'dead shrub']))
+console.log(diff(['andesite', 'grass', 'dirt', 'pink wool', 'dead shrub'], ['diorite', 'andesite', 'grass', 'dirt', 'dead shrub']));

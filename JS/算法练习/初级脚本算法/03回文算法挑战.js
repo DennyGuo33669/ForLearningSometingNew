@@ -28,14 +28,14 @@
 
 function palindrome (str) {
   // Good luck!
-  var re = /[^a-z0-9]/g
-  var a = str.toLowerCase().replace(re, '').split('').reverse().join('')
-  var b = str.toLowerCase().replace(re, '').split('').join('')
+  var re = /[^a-z0-9]/g;
+  var a = str.toLowerCase().replace(re, '').split('').reverse().join('');
+  var b = str.toLowerCase().replace(re, '').split('').join('');
   if (a === b) {
-    return true
+    return true;
   } else {
-    return false
+    return false;
   }
 }
 
-console.log(palindrome('?>,eye123,,,??'))
+console.log(palindrome('?>,eye123,,,??'));

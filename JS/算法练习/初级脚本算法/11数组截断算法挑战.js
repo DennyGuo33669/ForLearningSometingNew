@@ -17,9 +17,9 @@
 
 function slasher (arr, howMany) {
   // it doesn't always pay to be first
-  var newArr = arr.slice(howMany)
+  var newArr = arr.slice(howMany);
   // newArr = arr.splice(1,0,newArr);
-  return newArr
+  return newArr;
 }
 
-console.log(slasher([1, 2, 3], 2))
+console.log(slasher([1, 2, 3], 2));

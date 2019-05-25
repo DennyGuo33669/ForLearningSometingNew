@@ -10,20 +10,20 @@
 // largestOfFour([[4, 9, 1, 3], [13, 35, 18, 26], [32, 35, 97, 39], [1000000, 1001, 857, 1]]) 应该返回 [9, 35, 97, 1000000].
 
 function largestOfFour (arr) {
-  var max = new Array(arr.length)
+  var max = new Array(arr.length);
   for (var k = 0; k < max.length; k++) {
-    max[k] = 0
+    max[k] = 0;
   }
 
   for (var i = 0; i < arr.length; i++) {
     for (var j = 0; j < arr[i].length; j++) {
       if (max[i] < arr[i][j]) {
-        max[i] = arr[i][j]
+        max[i] = arr[i][j];
       }
     }
   }
   // You can do this!
-  return max
+  return max;
 }
 
-console.log(largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]))
+console.log(largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]));

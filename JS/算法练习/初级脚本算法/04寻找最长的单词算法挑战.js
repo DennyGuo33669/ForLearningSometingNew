@@ -21,14 +21,14 @@
 // findLongestWord("What if we try a super-long word such as otorhinolaryngology") 应该返回 19.
 
 function findLongestWord (str) {
-  var a = str.split(' ')
-  var max = 0
+  var a = str.split(' ');
+  var max = 0;
   for (var i = 0; i < a.length; i++) {
     if (max < a[i].length) {
-      max = a[i].length
+      max = a[i].length;
     }
   }
-  return max
+  return max;
 }
 
-console.log(findLongestWord('The quick brown fox jumped over the lazy dog'))
+console.log(findLongestWord('The quick brown fox jumped over the lazy dog'));

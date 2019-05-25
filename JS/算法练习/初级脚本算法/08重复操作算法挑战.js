@@ -17,10 +17,10 @@
 function repeat (str, num) {
   // repeat after me
   if (num < 0) {
-    return ''
+    return '';
   } else {
-    return str.repeat(num)
+    return str.repeat(num);
   }
 }
 
-console.log(repeat('abc', 3))
+console.log(repeat('abc', 3));

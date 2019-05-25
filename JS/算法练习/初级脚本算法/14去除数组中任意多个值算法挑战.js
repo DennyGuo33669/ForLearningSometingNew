@@ -18,11 +18,11 @@
 
 function destroyer (arr) {
   // Remove all the values
-  var a = arguments
+  var a = arguments;
   for (var i = 0; i < a.length; i++) {
-    arr = arr.filter(str => str !== a[i])
+    arr = arr.filter(str => str !== a[i]);
   }
-  return arr
+  return arr;
 }
 
-console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3))
+console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));

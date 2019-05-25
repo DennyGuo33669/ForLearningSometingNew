@@ -22,21 +22,21 @@
 // rot13("GUR DHVPX OEBJA QBT WHZCRQ BIRE GUR YNML SBK.") 应该解码为 "THE QUICK BROWN DOG JUMPED OVER THE LAZY FOX."
 
 function rot13 (str) { // LBH QVQ VG!
-  var char
-  var str1 = ''
+  var char;
+  var str1 = '';
   for (var i = 0; i < str.length; i++) {
-    char = str.charCodeAt(i)
+    char = str.charCodeAt(i);
     if (char < 65 || char > 90) {
-      str1 += String.fromCharCode(char)
+      str1 += String.fromCharCode(char);
     } else {
       if (char > 77) {
-        str1 += String.fromCharCode(char - 13)
+        str1 += String.fromCharCode(char - 13);
       } else {
-        str1 += String.fromCharCode(char + 13)
+        str1 += String.fromCharCode(char + 13);
       }
     }
   }
-  return str1// String.fromCharCode(char);
+  return str1;// String.fromCharCode(char);
 }
 // Change the inputs below to test
-console.log(rot13('SERR PBQR PNZC'))
+console.log(rot13('SERR PBQR PNZC'));

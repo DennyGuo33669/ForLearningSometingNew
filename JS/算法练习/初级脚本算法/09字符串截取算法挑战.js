@@ -20,18 +20,18 @@
 
 function truncate (str, num) {
   // Clear out that junk in your trunk
-  var s = ''
+  var s = '';
   if (str.length > num) {
     if (num <= 3) {
-      s = str.slice(0, num) + '...'
+      s = str.slice(0, num) + '...';
     } else {
-      s = str.slice(0, num - 3) + '...'
+      s = str.slice(0, num - 3) + '...';
     }
   } else {
-    s = str
+    s = str;
   }
 
-  return s
+  return s;
 }
 
-console.log(truncate('A-tisket a-tasket A green and yellow basket', 11))
+console.log(truncate('A-tisket a-tasket A green and yellow basket', 11));

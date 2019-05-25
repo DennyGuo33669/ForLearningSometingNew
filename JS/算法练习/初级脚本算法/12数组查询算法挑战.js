@@ -23,16 +23,16 @@
 // mutation(["hello", "neo"]) 应该返回 false.
 
 function mutation (arr) {
-  var newArr = arr[0].toLowerCase()
-  var newArr1 = arr[1].toLowerCase()
+  var newArr = arr[0].toLowerCase();
+  var newArr1 = arr[1].toLowerCase();
   // newArr = arr.indexOf('hey')
   // newArr = arr[0].indexOf("l")
   for (var i = 0; i < newArr1.length; i++) {
     if (newArr.indexOf(newArr1[i]) < 0) {
-      return false
+      return false;
     }
   }
-  return true
+  return true;
 }
 
-console.log(mutation(['hello', 'hey']))
+console.log(mutation(['hello', 'hey']));

@@ -14,12 +14,12 @@
 // titleCase("HERE IS MY HANDLE HERE IS MY SPOUT") 应该返回 "Here Is My Handle Here Is My Spout".
 
 function titleCase (str) {
-  var a = str.split(' ')
+  var a = str.split(' ');
   // var re = /[a-z]/;
   for (var i = 0; i < a.length; i++) {
-    a[i] = a[i][0].toUpperCase() + a[i].slice(1).toLowerCase()
+    a[i] = a[i][0].toUpperCase() + a[i].slice(1).toLowerCase();
   }
-  return a.join(' ')
+  return a.join(' ');
 }
 
-console.log(titleCase("I'm a little tea pot"))
+console.log(titleCase("I'm a little tea pot"));

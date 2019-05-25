@@ -17,13 +17,13 @@
 function chunk (arr, size) {
   // Break it up.
   // for(var i = 0 ; i<2)
-  var newArr = []
+  var newArr = [];
 
   for (var i = 0; i < arr.length; i += size) {
-    newArr.push(arr.slice(i, i + size))
+    newArr.push(arr.slice(i, i + size));
   }
 
-  return newArr
+  return newArr;
 }
 
-console.log(chunk([1, 2, 3, 4], 2))
+console.log(chunk([1, 2, 3, 4], 2));
