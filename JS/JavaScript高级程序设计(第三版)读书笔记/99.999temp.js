@@ -1,9 +1,8 @@
-function buildUrl(){
-    var qs = '?debug=true';
+var color = 'blue';
 
-    with(location){
-        var url = href + qs
-    }
-
-    return url;
+function getColor () {
+  var color = 'red';
+  return color;
 }
+
+console.log(getColor());
