@@ -1,6 +1,12 @@
-var colors = ['red', 'green', 'blue', 'yellow', 'purple'];
-var colors2 = colors.slice(1);
-var colors3 = colors.slice(1, 4);
+var colors = ['red', 'green', 'blue'];
+var removed = colors.splice(0, 1); // 删除第一项
+console.log(colors); // 'green', 'blue'
+console.log(removed); // 'red'
 
-console.log(colors2); // 'green', 'blue', 'yellow', 'purple'
-console.log(colors3); // green', 'blue', 'yellow'
+removed = colors.splice(1, 0, 'yellow', 'orange');
+console.log(colors); // 'green', 'yellow', 'orange', 'blue'
+console.log(removed); // 返回一个空数组
+
+removed = colors.splice(1, 1, 'red', 'purple');
+console.log(colors); // 'green', 'red', 'purple', 'orange', 'blue'
+console.log(removed); // 'yellow'
