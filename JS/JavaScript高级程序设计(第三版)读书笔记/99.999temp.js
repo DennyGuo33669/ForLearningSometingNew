@@ -1,9 +1,12 @@
-function outer () {
-  inner();
+window.color = 'red';
+var o = { color: 'blue' };
+
+function sayColor () {
+  console.log(this.color);
 }
 
-function inner () {
-  console.log(arguments.callee.caller);
-}
+var objectSayColor = sayColor.bind(o);
+objectSayColor();
 
-outer();
+sayColor.call(o);
+
