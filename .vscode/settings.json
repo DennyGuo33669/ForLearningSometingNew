@@ -5,7 +5,9 @@
         "Hiragino",
         "Paren",
         "instanceof",
+        "substr",
         "typeof",
+        "worl",
         "zakas"
     ]
 }
