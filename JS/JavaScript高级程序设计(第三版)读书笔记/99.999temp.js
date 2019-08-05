@@ -1,18 +1,15 @@
-
-function Person (name, age, job) {
-  // 创建要返回的对象
-  var o = new Object();
-
-  // 可以在这里定义私有变量和函数
-
-  // 添加方法
-  o.sayName = function () {
-    console.log(name);
-  };
-
-  // 返回对象
-  return o;
+function SuperType () {
+  this.colors = ['red', 'blue', 'green'];
 }
 
-var friend = Person('Emma', 17, 'Student');
-friend.sayName();
+function SubType () {}
+
+// 继承了SuperType
+SubType.prototype = new SuperType();
+
+var instance1 = new SubType();
+instance1.colors.push('black');
+console.log(instance1.colors); // [ 'red', 'blue', 'green', 'black' ]
+
+var instance2 = new SubType();
+console.log(instance2.colors); // [ 'red', 'blue', 'green', 'black' ]
