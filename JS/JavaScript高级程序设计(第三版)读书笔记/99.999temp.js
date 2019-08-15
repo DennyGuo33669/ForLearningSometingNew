@@ -1,15 +1,26 @@
-function SuperType () {
-  this.colors = ['red', 'blue', 'green'];
+
+function createComparisonFunction (propertyName) {
+  return function (obj1, obj2) {
+    var value1 = obj1[ propertyName];
+    var value2 = obj2[propertyName];
+
+    if (value1 < value2) {
+      return -1;
+    } else if (value1 > value2) {
+      return 1;
+    } else {
+      return 0;
+    }
+  };
 }
 
-function SubType () {}
+// 创建函数
+var compareNames = createComparisonFunction('name');
 
-// 继承了SuperType
-SubType.prototype = new SuperType();
+// 调用函数
+var result = compareNames({ name: 'Emma' }, { name: 'Jam' });
 
-var instance1 = new SubType();
-instance1.colors.push('black');
-console.log(instance1.colors); // [ 'red', 'blue', 'green', 'black' ]
+// 解除对匿名函数的引用(以便释放内存)
+compareNames = null;
 
-var instance2 = new SubType();
-console.log(instance2.colors); // [ 'red', 'blue', 'green', 'black' ]
+console.log(result);
