@@ -1,6 +1,6 @@
 # Daily English Dictation
 
-1. Mother Teresa, who received a Novel Peace Prize for her work on behalf of the poor,dies in Calcutta,India--she was 87 years old.
+1. Mother Teresa, who received a Nobel Peace Prize for her work on behalf of the poor,dies in Calcutta,India--she was 87 years old.
 2. Jerry,what time do you have? I have 5 o'clock.
 3. There are 3 things I have learned NEVER to discuss with people : religion,politics and the Great Pumpkin!
 4. Don't ever let somebody tell you , you can't do something.
