@@ -22,17 +22,3 @@
 //   console.log(`[^${i + 1}]:`);
 // }
 
-var name = 'The window';
-
-var obj = {
-  name: 'My object',
-
-  getNameFunc: function () {
-    var that = this;
-    return function () {
-      return that.name;
-    };
-  }
-};
-
-console.log(obj.getNameFunc()()); // 'My object'
