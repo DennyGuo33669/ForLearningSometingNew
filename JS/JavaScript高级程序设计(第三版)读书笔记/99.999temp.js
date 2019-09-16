@@ -1,3 +1,4 @@
+
 // // function createComparisonFunction (propertyName) {
 // //   return function (obj1, obj2) {
 // //     var value1 = obj1[propertyName];
@@ -22,3 +23,9 @@
 //   console.log(`[^${i + 1}]:`);
 // }
 
+(function () {
+  var now = new Date();
+  if (now.getMonth() == 0 && now.getDate() == 1) {
+    console.log('Happy new year!');
+  }
+})();
