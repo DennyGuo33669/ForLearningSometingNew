@@ -23,26 +23,23 @@
 //   console.log(`[^${i + 1}]:`);
 // }
 
-(function () {
-  var name = '';
-  Person = function (value) {
-    name = value;
+var application = function () {
+  // 私有变量和函数
+  var components = new Array();
+
+  // 初始化
+  components.push(new BaseComponent());
+
+  // 公共
+  return {
+    getComponentCount: function () {
+      return components.length;
+    },
+
+    registerComponents: function (component) {
+      if (typeof component == 'object') {
+        components.push(component);
+      }
+    }
   };
-
-  Person.prototype.getName = function () {
-    return name;
-  };
-
-  Person.prototype.setName = function (value) {
-    name = value;
-  };
-
-  var person1 = new Person('Emma');
-  console.log(person1.getName()); // Emma
-  person1.setName('Jam');
-  console.log(person1.getName()); // Jam
-
-  var person2 = new Person('CCC');
-  console.log(person1.getName()); // CCC
-  console.log(person2.getName()); // CCC
-})();
+}();
