@@ -23,4 +23,5 @@
 //   console.log(`[^${i + 1}]:`);
 // }
 
-
+var age = 29;
+window.color
