@@ -6,10 +6,13 @@
         "DDTHH",
         "Hiragino",
         "Paren",
+        "anotherframe",
+        "anotherframeset",
         "instanceof",
         "substr",
         "typeof",
         "worl",
+        "yetanotherframe",
         "zakas"
     ]
 }
