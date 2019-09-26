@@ -36,11 +36,4 @@
 //   }
 // }
 
-// 调整到100*100
-window.resizeTo(100, 100);
 
-// 调整到200*150
-window.resizeBy(100, 50);
-
-// 调整到300*300
-window.resizeTo(300 * 300);
