@@ -8,6 +8,7 @@
         "Paren",
         "anotherframe",
         "anotherframeset",
+        "compat",
         "instanceof",
         "substr",
         "typeof",

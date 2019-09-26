@@ -23,14 +23,24 @@
 //   console.log(`[^${i + 1}]:`);
 // }
 
-// 将窗口移动到屏幕左上角
-window.moveTo(0, 0);
+// var pageWidth = window.innerWidth;
+// var pageHeight = window.innerHeight;
 
-// 将窗口向下移动100像素
-window.moveBy(0, 100);
+// if (typeof pageWidth !== 'number') {
+//   if (document.compatMode == 'CSS1Compat') {
+//     pageWidth = document.documentElement.clientWidth;
+//     pageHeight = document.documentElement.clientHeight;
+//   } else {
+//     pageWidth = document.body.clientWidth;
+//     pageHeight = document.body.clientHeight;
+//   }
+// }
 
-// 将窗口移动到(200,300)
-window.moveTo(200, 300);
+// 调整到100*100
+window.resizeTo(100, 100);
 
-// 将窗口向左移动50像素
-window.moveBy(-50, 0);
+// 调整到200*150
+window.resizeBy(100, 50);
+
+// 调整到300*300
+window.resizeTo(300 * 300);
