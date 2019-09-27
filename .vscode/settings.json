@@ -11,6 +11,7 @@
         "compat",
         "instanceof",
         "substr",
+        "todos",
         "typeof",
         "worl",
         "yetanotherframe",
