@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+
+<body>
+  <div id="example">
+    <!-- <p>Original message:{{msg}}</p>
+    <p>Computed reversed message:{{reversedMsg}}</p> -->
+    <h1>site:{{site}}</h1>
+    <h1>url:{{url}}</h1>
+    <h1>{{details}}</h1>
+  </div>
+
+
+  <script type="text/javascript">
+    var data = {
+      msg: "hello Vue.js!",
+      site: 'happy day!',
+      url: "www.  .com",
+    };
+    var vm = new Vue({
+      el: "#example",
+      data: data,
+      computed: {
+        // reversedMsg:function(){
+        //     return this.msg.split('').reverse().join('');
+        // }
+        details: function () {
+          return this.site + "学习使我快乐"
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
