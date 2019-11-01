@@ -8,19 +8,27 @@
   <title>Document</title>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
+  <style>
+    .class1 {
+      background: #444;
+      color: #eee;
+    }
+  </style>
+
+
 </head>
+
 
 <body>
   <div id="example">
     <!-- <p>Original message:{{msg}}</p>
     <p>Computed reversed message:{{reversedMsg}}</p> -->
-    <h1>site:{{site}}</h1>
+    <!-- <h1>site:{{site}}</h1>
     <h1>url:{{url}}</h1>
-    <h1>{{details}}</h1>
-  </div>
+    <h1>{{details}}</h1> -->
 
 
-  <script type="text/javascript">
+    <!-- <script type="text/javascript">
     var data = {
       msg: "hello Vue.js!",
       site: 'happy day!',
@@ -35,6 +43,65 @@
         // }
         details: function () {
           return this.site + "学习使我快乐"
+        }
+      }
+    })
+  </script> -->
+
+
+    <label for="r1">修改颜色</label> <input type="checkbox" v-model="use" id="r1">
+    <div :class="{'class1': use}">
+      v-bind:class 指令
+    </div>
+    <hr>
+
+
+    <p> <a :href="url">bilibili</a></p>
+    <hr>
+
+
+    <p>{{msg}}</p>
+    <input v-model="msg">
+    <hr>
+
+    <p>{{msg}}</p>
+    <button @click="reversedMsg">反转字符串</button>
+    <hr>
+
+    {{msg | capitalize}}
+    <hr>
+
+    <ol>
+      <li v-for="site in sites">
+        {{site.name}}
+      </li>
+    </ol>
+
+  </div>
+
+
+  <script type="text/javascript">
+    var data = {
+      use: false,
+      url: "https://www.bilibili.com",
+      msg: "apple",
+    };
+    var vm = new Vue({
+      el: "#example",
+      data: data,
+      methods: {
+        reversedMsg: function () {
+          this.msg = this.msg.split('').reverse().join('');
+        }
+      },
+      filters: {
+        capitalize: function (value) {
+          if (!value) {
+            return ''
+          }
+          value = value.toString();
+          return value.charAt(0).toUpperCase() + value.slice(1);
+
         }
       }
     })

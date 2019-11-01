@@ -48,3 +48,27 @@
 //     message: '页面加载于' + new Date().toLocaleString()
 //   }
 // });
+
+var data = {
+  use: false,
+  url: 'https://www.bilibili.com',
+  msg: '坎坎坷坷'
+};
+var vm = new Vue({
+  el: '#example',
+  data: data,
+  methods: {
+    reversedMsg: function () {
+      this.msg = this.msg.split('').reverse().join('');
+    }
+  },
+  filters: {
+    capitalize: function (val) {
+      if (!val) {
+        return '';
+      }
+      val = val.toString();
+      return val.charAt(0).toUpperCase() + val.slice(1);
+    }
+  }
+});
