@@ -38,4 +38,4 @@ function palindrome (str) {
   }
 }
 
-console.log(palindrome('?>,eye123,,,??'));
+console.log(isPalindrome('?>,eye123,,,??'));
