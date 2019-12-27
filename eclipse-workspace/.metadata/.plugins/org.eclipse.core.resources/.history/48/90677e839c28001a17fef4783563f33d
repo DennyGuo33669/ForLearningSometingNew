@@ -150,6 +150,7 @@ public class Login extends JFrame {
 
 		ConfirmButton.addActionListener(new getText());
 
+//        setLocationRelativeTo(null);
 		// ´°¿Ú¾ÓÖÐ
 		this.setLocation(X / 2 - 300, Y / 2 - 200);
 		setTitle("µÇÂ¼");

@@ -126,7 +126,8 @@ public class Login extends JFrame {
 					JOptionPane.showMessageDialog(null, "请输入账号或密码!", "提示", JOptionPane.ERROR_MESSAGE);
 				} else {
 					AccountCheck accountCheck = new AccountCheck(iDTextString);
-					if (iDTextString.equals(accountCheck.idString) && passwordTextString.equals(accountCheck.pwString)) {
+					if (iDTextString.equals(accountCheck.idString)
+							&& passwordTextString.equals(accountCheck.pwString)) {
 						System.out.println("登录成功!");
 						JOptionPane.showMessageDialog(null, "登录成功!", "提示", JOptionPane.INFORMATION_MESSAGE);
 						new DatabaseUI();
@@ -150,6 +151,7 @@ public class Login extends JFrame {
 
 		ConfirmButton.addActionListener(new getText());
 
+//        setLocationRelativeTo(null);
 		// 窗口居中
 		this.setLocation(X / 2 - 300, Y / 2 - 200);
 		setTitle("登录");

@@ -25,4 +25,5 @@
     <fullyQualifiedTypeName name="com.sun.org.apache.xalan.internal.xsltc.compiler.sym"/>
     <fullyQualifiedTypeName name="com.GUI.DatabaseUI"/>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="com.GUI.Adddata"/>
 </qualifiedTypeNameHistroy>

@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="Location"/>
+		<item key="selection" value="JFrame "/>
 		<list key="findhistory">
+			<item value="JFrame "/>
 			<item value="location"/>
 			<item value="用户名"/>
 			<item value="账号"/>

@@ -2,11 +2,14 @@ package com.GUI;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.WindowConstants;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Toolkit;
+
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -23,15 +26,22 @@ public class Login extends JFrame {
     private JButton ResetButton;
  
     public Login() {
+    	
+    	//获取屏幕长宽
+    	int X=Toolkit.getDefaultToolkit().getScreenSize().width;
+		int Y=Toolkit.getDefaultToolkit().getScreenSize().height;
+		
+		
+		
         getContentPane().setLayout(null);
  
-        //用户名
+        //账号
         IDNumber = new JLabel("账号：");
         IDNumber.setFont(new Font("宋体", Font.BOLD, 18));
         IDNumber.setBounds(96, 66, 95, 18);
 
         
-        //用户名输入框
+        //账号输入框
         IDText = new JTextField("输入账号");
         IDText.setToolTipText("输入账号");
         IDText.setBounds(155, 65, 170, 24);
@@ -110,18 +120,27 @@ public class Login extends JFrame {
         	@Override
         	public void actionPerformed(ActionEvent e) {
         		String iDTextString = IDText.getText();
-        		String caredTextString = PasswordText.getText();
-        		System.out.println("账号:"  +iDTextString + "\n密码:" + caredTextString);
+        		String passwordTextString = PasswordText.getText();
+//        		System.out.println("账号:"  +iDTextString + "\n密码:" + caredTextString);
         		
-        		if((iDTextString.equals("输入账号") || iDTextString.equals(""))||(caredTextString.equals("输入密码")  || iDTextString.equals("")) ) {
+        		//账号约束条件
+        		if(iDTextString.length()<2||iDTextString.length()>6) {
+        			System.out.println("账号在2~10位之间!");
+        		}    		
+        		
+        		//登录验证
+        		else if((iDTextString.equals("输入账号") || iDTextString.equals(""))||(passwordTextString.equals("输入密码")  || iDTextString.equals("")) ) {
         			System.out.println("请输入账号或密码!");
+        			JOptionPane.showMessageDialog( null,"请输入账号或密码!","提示",JOptionPane.ERROR_MESSAGE);
         		}else{
         			AccountCheck accountCheck = new AccountCheck(iDTextString);
-        			if(iDTextString.equals(accountCheck.idString)&&caredTextString.equals(accountCheck.pwString)) {
+        			if(iDTextString.equals(accountCheck.idString)&&passwordTextString.equals(accountCheck.pwString)) {
         				System.out.println("登录成功!");
+        				JOptionPane.showMessageDialog( null,"登录成功!","提示",JOptionPane.INFORMATION_MESSAGE);
         				new DatabaseUI();
         			}else {
-        				System.out.println("用户名或密码错误!");
+        				System.out.println("账号或密码错误!");
+        				JOptionPane.showMessageDialog( null,"账号或密码错误!","提示",JOptionPane.ERROR_MESSAGE);
         			}
         		}
         		
@@ -143,10 +162,12 @@ public class Login extends JFrame {
         
         ConfirmButton.addActionListener(new getText());
  
-        setLocationRelativeTo(null);// 窗口居中
+//        setLocationRelativeTo(null);
+        // 窗口居中
+        this.setLocation(X/2-300, Y/2-200);
         setTitle("登录");
         setVisible(true);
-        setSize(450, 301);
+        setSize(450, 300);
         setResizable(false);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 

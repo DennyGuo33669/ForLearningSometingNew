@@ -18,7 +18,7 @@ public class AccountCheck {
 
 	public AccountCheck(String key) {
 		// 连接数据库
-		MongoClient mongoClient = new MongoClient("localhost", 27017);
+		MongoClient mongoClient = new MongoClient("host", 27017);
 		MongoDatabase db = mongoClient.getDatabase("mycol");
 		MongoCollection<Document> doc = db.getCollection("account");
 
@@ -27,7 +27,7 @@ public class AccountCheck {
 		FindIterable<Document> iter = doc.find(new Document("ID", new Document("$in", list)));
 		iter.forEach(new Block<Document>() {
 			public void apply(Document _doc) {
-//				System.out.println(_doc.toJson());
+//    	System.out.println(_doc.toJson());
 				AccountCheck.idString = _doc.getString("ID");
 				AccountCheck.pwString = _doc.getString("password");
 			}

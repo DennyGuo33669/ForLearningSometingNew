@@ -20,7 +20,6 @@ public class DatabaseUI extends JFrame implements ActionListener {
 
 	public DatabaseUI() {
 
-		//获取屏幕长宽
 		int X = Toolkit.getDefaultToolkit().getScreenSize().width;
 		int Y = Toolkit.getDefaultToolkit().getScreenSize().height;
 
@@ -59,7 +58,6 @@ public class DatabaseUI extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO 自动生成的方法存根
-		new Adddata(JFrame, "录入成绩", true);
 
 	}
 }
