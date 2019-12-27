@@ -1,0 +1,9 @@
+package com.GUI;
+
+public class accountDatabase {
+
+	private String id = null;
+	private String pw = null;
+	
+	
+}

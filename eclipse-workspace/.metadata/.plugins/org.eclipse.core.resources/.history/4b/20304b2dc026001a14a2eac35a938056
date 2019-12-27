@@ -1,0 +1,39 @@
+package com.DAO;
+
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoDatabase;
+import org.bson.Document;
+import com.mongodb.client.MongoCollection;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import com.mongodb.client.FindIterable;
+import com.mongodb.client.MongoCursor;
+
+final public class MongoDBJDBC{
+	
+    static {
+    // 连接到 mongodb 服务
+    MongoClient mongoClient = new MongoClient("localhost",27017);
+    }
+  
+	
+	
+    public static void conn() {
+    	MongoDatabase mongoDatabase = mongoClient.getDatabase("mycol");  
+        System.out.println("Connect to database successfully");
+    }
+
+    public static void main( String args[] ){
+
+        try{
+            MongoDBJDBC db = new MongoDBJDBC();
+            db.conn();
+            
+
+        }catch(Exception e){
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+        }
+    }
+}
+

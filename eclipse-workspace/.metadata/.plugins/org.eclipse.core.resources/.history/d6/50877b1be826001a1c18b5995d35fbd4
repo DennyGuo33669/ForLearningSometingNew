@@ -1,0 +1,100 @@
+package com.GUI;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.bson.Document;
+
+import com.DAO.MongoDBJDBC;
+import com.mongodb.BasicDBList;
+import com.mongodb.BasicDBObject;
+import com.mongodb.Block;
+import com.mongodb.MongoClient;
+import com.mongodb.client.FindIterable;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoCursor;
+import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Filters;
+
+public class accountDatabase {
+
+	private String id = null;
+	private String pw = null;
+	
+	
+public void show(String databaseName,String collectionName) {
+		
+		String string ="";
+		 MongoClient mongoClient = new MongoClient( "localhost" , 27017 );
+	        
+	        // 连接到数据库
+	        MongoDatabase mongoDatabase = mongoClient.getDatabase(databaseName);  
+	        System.out.println("Connect to database successfully");
+	        
+	        MongoCollection<Document> collection = mongoDatabase.getCollection(collectionName);
+	        System.out.println("集合   "+collectionName+"  选择成功");
+	        
+	        //检索所有文档  
+	         /** 
+	         * 1. 获取迭代器FindIterable<Document> 
+	         * 2. 获取游标MongoCursor<Document> 
+	         * 3. 通过游标遍历检索出的文档集合 
+	         * */  
+	         FindIterable<Document> findIterable = collection.find();  
+	         MongoCursor<Document> mongoCursor = findIterable.iterator();  
+	         while(mongoCursor.hasNext()){  
+	        	  
+	        	 Document accountDocument = mongoCursor.next();
+	        	 String idString = accountDocument.getString("ID");
+	        	 String pwString = accountDocument.getString("password");
+	        	 
+	        	 
+	             System.out.println("用户名"+ idString +"   密码:"+pwString );
+	         }  
+	       
+	         
+	    }
+	     
+
+
+public static void main( String args[] ){
+
+    try{
+       
+//    	db.conn("mycol","account");
+//    	db.getCollection("mycol", "account");
+//    	db.insert("mycol", "account");
+//    	db.show("mycol", "account");
+    	
+    	
+    	MongoClient mongoClient = new MongoClient();
+
+    	MongoDatabase db = mongoClient.getDatabase("mycol");
+    	MongoCollection<Document> doc = db.getCollection("account");
+
+//    	FindIterable<Document> iter = doc.find();
+//    	iter.forEach(new Block<Document>() {
+//    	public void apply(Document _doc) {
+//    	System.out.println(_doc.toJson());
+//    	}
+//    	});
+//    	
+    	
+    	 List<String> list = new ArrayList<String>();
+    	 list.add("张三");
+    	 list.add("李四");
+    	FindIterable<Document> iter = doc.find(new Document("name",new Document("$in",list)));
+    	
+//    	FindIterable<Document> iter = doc.find(Filters.in("id", "admin"));
+    	iter.forEach(new Block<Document>() {
+    	public void apply(Document _doc) {
+    	System.out.println(_doc.toJson());
+    	}
+    	});
+    	
+
+    }catch(Exception e){
+        System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+    }
+}
+}

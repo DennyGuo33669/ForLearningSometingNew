@@ -1,0 +1,57 @@
+package com.DAO;
+
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoDatabase;
+import org.bson.Document;
+import org.bson.codecs.ValueCodecProvider;
+
+import com.mongodb.client.MongoCollection;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import com.mongodb.client.FindIterable;
+import com.mongodb.client.MongoCursor;
+
+public class MongoDBJDBC{
+	
+	public void conn(String databaseName,String collectionName) {
+		// 连接到 mongodb 服务
+		MongoClient mongoClient = new MongoClient( "localhost" , 27017 );
+      
+		// 连接到数据库
+		MongoDatabase mongoDatabase = mongoClient.getDatabase(databaseName);  
+		System.out.println("Connect to database successfully/数据库连接成功");
+
+		// 创建集合
+		mongoDatabase.createCollection(collectionName);
+		System.out.println("集合创建成功");
+	}
+	
+	
+	public void getCollection(String databaseName,String collectionName) {
+		// 连接到 mongodb 服务
+				MongoClient mongoClient = new MongoClient( "localhost" , 27017 );
+		      
+				// 连接到数据库
+				MongoDatabase mongoDatabase = mongoClient.getDatabase(databaseName);  
+				System.out.println("Connect to database successfully/数据库连接成功");
+		MongoCollection<Document> collection = mongoDatabase.getCollection(collectionName);
+	       System.out.println("集合 "+collectionName+"选择成功");
+	}
+	
+	
+    public static void main( String args[] ){
+
+        try{
+           
+        	MongoDBJDBC db = new MongoDBJDBC();
+//        	db.conn("mycol","account");
+        	db.getCollection("mycol", "account");
+        	
+        	
+        }catch(Exception e){
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+        }
+    }
+}
+

@@ -1,0 +1,105 @@
+package com.DAO;
+
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoDatabase;
+import org.bson.Document;
+import com.mongodb.client.MongoCollection;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import com.mongodb.client.FindIterable;
+import com.mongodb.client.MongoCursor;
+
+final public class MongoDBJDBC{
+
+	
+//    public void conn(String host,int port,String databaseName){
+//        // 连接到 mongodb 服务
+//        MongoClient mongoClient = new MongoClient( host , port );
+//        // 连接到数据库/创建数据库 use database
+//        MongoDatabase mongoDatabase = mongoClient.getDatabase(databaseName);
+//        System.out.println("Connect to database successfully");
+//    }
+//
+//    //创建集合 db.collections
+//    public void createCollection(String collectionName){
+//        mongoDatabase.createCollection(collectionName);
+//        System.out.println("集合创建成功");
+//
+//    }
+//
+//    // 选择集合
+//    public void cooseCollection(String collectionName){
+//        MongoCollection<Document> collection = mongoDatabase.getCollection(collectionName);
+//        System.out.println("集合 "+ collectionName +" 选择成功");
+//    }
+
+//
+    private static MongoClient mongoClient=null;
+    private static MongoDatabase mongoDatabase=null;
+
+    private static MongoCollection<Document> collection=null;
+    private MongoDBJDBC() {}
+    static {
+
+        mongoClient=new MongoClient("localhost",27017);
+    }
+
+    public static MongoCollection<Document> getCollection(){
+//        if(mongoDatabase==null) {
+//            mongoDatabase=mongoClient.getDatabase("test");
+//        }
+
+        collection=mongoDatabase.getCollection("test");
+
+        return collection;
+
+    }
+
+
+
+    public static void main( String args[] ){
+
+        try{
+            MongoDBJDBC db = new MongoDBJDBC();
+
+            db.getCollection();
+//            db.conn("localhost",27017,"test");
+//            db.createCollection("test");
+
+
+            //插入文档
+            /**
+             * 1. 创建文档 org.bson.Document 参数为key-value的格式
+             * 2. 创建文档集合List<Document>
+             * 3. 将文档集合插入数据库集合中 mongoCollection.insertMany(List<Document>) 插入单个文档可以用 mongoCollection.insertOne(Document)
+             * */
+//             db.collection.insert({"xxx":"xxx"})
+//            Document document = new Document("name", "孙悟空").
+//                    append("age", "18").
+//                    append("gender", "male");
+//            List<Document> documents = new ArrayList<Document>();
+//            documents.add(document);
+//            collection.insertMany(documents);
+//            System.out.println("文档插入成功");
+//
+//            //检索所有文档
+//            /**
+//             * 1. 获取迭代器FindIterable<Document>
+//             * 2. 获取游标MongoCursor<Document>
+//             * 3. 通过游标遍历检索出的文档集合
+//             * */
+//            FindIterable<Document> findIterable = collection.find();
+//            MongoCursor<Document> mongoCursor = findIterable.iterator();
+//            while(mongoCursor.hasNext()){
+//                System.out.println(mongoCursor.next());
+//            }
+//
+
+
+        }catch(Exception e){
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+        }
+    }
+}
+

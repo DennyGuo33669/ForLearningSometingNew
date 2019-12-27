@@ -1,0 +1,177 @@
+package com.GUI;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+import javax.swing.WindowConstants;
+
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.ActionEvent;
+ 
+
+public class Login extends JFrame {
+    private JTextField IDText;
+    private JTextField PasswordText;
+    private JLabel IDNumber;
+    private JLabel PasswordNumber;
+    private JButton ConfirmButton;
+    private JButton ResetButton;
+ 
+    public Login() {
+        getContentPane().setLayout(null);
+ 
+        //用户名
+        IDNumber = new JLabel("账号：");
+        IDNumber.setFont(new Font("宋体", Font.BOLD, 18));
+        IDNumber.setBounds(96, 66, 95, 18);
+
+        
+        //用户名输入框
+        IDText = new JTextField("输入账号");
+        IDText.setToolTipText("输入账号");
+        IDText.setBounds(155, 65, 170, 24);
+        IDText.setColumns(10);
+        IDText.setForeground(Color.lightGray);// 设置前景色为灰色
+        IDText.setEditable(false);// 设置为不可编辑状态
+        IDText.setBackground(Color.WHITE);// 设置背景色为白色
+        IDText.addMouseListener(new MouseAdapter() {
+            // 点击输入框去除文字,激活文本框
+            public void mouseClicked(MouseEvent e) {
+                if (e.getButton() == MouseEvent.BUTTON1) {
+                    if (!IDText.isEditable()) {
+                        IDText.setText("");
+                        IDText.setForeground(Color.BLACK);
+                        IDText.setEditable(true);
+                        IDText.requestFocus();
+                    }
+                }
+            }
+        });
+ 
+        
+        //密码
+        PasswordNumber = new JLabel("密码：");
+        PasswordNumber.setFont(new Font("宋体", Font.BOLD, 18));
+        PasswordNumber.setBounds(96, 103, 95, 18);
+ 
+        
+        //密码输入框
+        PasswordText = new JTextField("输入密码");
+        PasswordText.setToolTipText("默认密码 123456");
+        PasswordText.setBounds(155, 102, 170, 24);
+        PasswordText.setColumns(10);
+        PasswordText.setForeground(Color.lightGray);// 设置前景色为灰色
+        PasswordText.setEditable(false);// 设置为不可编辑状态
+        PasswordText.setBackground(Color.WHITE);// 设置背景色为白色
+        PasswordText.addMouseListener(new MouseAdapter() {
+            // 点击输入框去除文字,激活文本框
+            public void mouseClicked(MouseEvent e) {
+                if (e.getButton() == MouseEvent.BUTTON1) {
+                    if (!PasswordText.isEditable()) {
+                        PasswordText.setText("");
+                        PasswordText.setForeground(Color.BLACK);
+                        PasswordText.setEditable(true);
+                        PasswordText.requestFocus();
+                    }
+                }
+            }
+        });
+ 
+       //登录按钮
+        ConfirmButton = new JButton("登录");
+        ConfirmButton.setFont(new Font("宋体", Font.BOLD, 18));
+        ConfirmButton.setBounds(96, 148, 113, 27);
+ 
+        //重置按钮
+        ResetButton = new JButton("重置");
+        ResetButton.setFont(new Font("宋体", Font.BOLD, 18));
+        ResetButton.setBounds(223, 148, 113, 27);
+        ResetButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                IDText.setForeground(Color.lightGray);
+                PasswordText.setForeground(Color.lightGray);
+                IDText.setText("输入学号");
+                PasswordText.setText("输入密码");
+                IDText.setEditable(false);
+                PasswordText.setEditable(false);
+            }
+        });
+ 
+        
+        
+
+        class getText  implements ActionListener {
+        	
+        	@Override
+        	public void actionPerformed(ActionEvent e) {
+        		String iDTextString = IDText.getText();
+        		String passwordTextString = PasswordText.getText();
+//        		System.out.println("账号:"  +iDTextString + "\n密码:" + caredTextString);
+        		
+        		//约束条件
+        		if(iDTextString.length()<2||iDTextString.length()>6) {
+        			System.out.println("用户名不可以小于1为或大于6位!");
+        		} 
+//        		else if((passwordTextString.length()<2||passwordTextString.length()>3)) {
+//        		
+//        		}
+//        		
+        		
+        		//登录验证
+        		else if((iDTextString.equals("输入账号") || iDTextString.equals(""))||(passwordTextString.equals("输入密码")  || iDTextString.equals("")) ) {
+        			System.out.println("请输入账号或密码!");
+//        			JOptionPane.showMessageDialog( null,"You input is","错误",JOptionPane.ERROR_MESSAGE);
+        		}else{
+        			AccountCheck accountCheck = new AccountCheck(iDTextString);
+        			if(iDTextString.equals(accountCheck.idString)&&passwordTextString.equals(accountCheck.pwString)) {
+        				System.out.println("登录成功!");
+        				new DatabaseUI();
+        			}else {
+        				System.out.println("用户名或密码错误!");
+        			}
+        		}
+        		
+        		
+        	}
+        	
+        }
+        
+        
+        
+        
+        //面板
+        getContentPane().add(IDNumber);
+        getContentPane().add(IDText);
+        getContentPane().add(PasswordNumber);
+        getContentPane().add(PasswordText);
+        getContentPane().add(ConfirmButton);
+        getContentPane().add(ResetButton);
+        
+        ConfirmButton.addActionListener(new getText());
+ 
+        setLocationRelativeTo(null);// 窗口居中
+        setTitle("登录");
+        setVisible(true);
+        setSize(450, 301);
+        setResizable(false);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+      
+
+    }
+ 
+
+	public static void main(String[] args) {
+        new Login();
+    }
+    
+ 
+
+
+}
