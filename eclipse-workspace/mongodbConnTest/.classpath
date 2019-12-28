@@ -9,5 +9,8 @@
 	<classpathentry kind="lib" path="D:/Coding/eclipse-workspace/mongodbConnTest/lib/bson/3.5.0/bson-3.5.0.jar"/>
 	<classpathentry kind="lib" path="D:/Coding/eclipse-workspace/mongodbConnTest/lib/mongodb-driver/3.5.0/mongodb-driver-3.5.0.jar"/>
 	<classpathentry kind="lib" path="D:/Coding/eclipse-workspace/mongodbConnTest/lib/mongodb-driver-core/3.5.0/mongodb-driver-core-3.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Denny/Desktop/Coding/LearningSometingNew/eclipse-workspace/mongodbConnTest/lib/bson/3.5.0/bson-3.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Denny/Desktop/Coding/LearningSometingNew/eclipse-workspace/mongodbConnTest/lib/mongodb-driver/3.5.0/mongodb-driver-3.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Denny/Desktop/Coding/LearningSometingNew/eclipse-workspace/mongodbConnTest/lib/mongodb-driver-core/3.5.0/mongodb-driver-core-3.5.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -6,8 +6,15 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="JFrame "/>
+		<item key="selection" value="resetButton"/>
 		<list key="findhistory">
+			<item value="ResetButton"/>
+			<item value="ConfirmButton"/>
+			<item value="PasswordText"/>
+			<item value="PasswordTest"/>
+			<item value="PasswordNumber"/>
+			<item value="IDNumber"/>
+			<item value="IDText"/>
 			<item value="JFrame "/>
 			<item value="location"/>
 			<item value="用户名"/>
@@ -16,14 +23,20 @@
 			<item value="package com.DAO;"/>
 		</list>
 		<list key="replacehistory">
+			<item value="resetButton"/>
+			<item value="confirmButton"/>
+			<item value="passwordText"/>
+			<item value="passwordNumber"/>
+			<item value="idNumber"/>
+			<item value="idText"/>
 			<item value="账号"/>
 			<item value="用户名"/>
 			<item value="Password"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="740"/>
-		<item key="DIALOG_Y_ORIGIN" value="169"/>
+		<item key="DIALOG_X_ORIGIN" value="-271"/>
+		<item key="DIALOG_Y_ORIGIN" value="308"/>
 		<item key="DIALOG_WIDTH" value="278"/>
 		<item key="DIALOG_HEIGHT" value="410"/>
 		<item key="DIALOG_FONT_NAME" value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI"/>

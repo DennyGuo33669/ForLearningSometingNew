@@ -1,8 +1,12 @@
 {
     "compilerOptions": {
-        "target": "es6"
+        "target": "es6",
+        "checkJs": true,
     },
-    "exclude": [
-        "node_modules"
-    ]
+    // "exclude": [
+    //     "node_modules"
+    // ],
+    "include": [
+        "node_modules/*"
+      ],
 }
