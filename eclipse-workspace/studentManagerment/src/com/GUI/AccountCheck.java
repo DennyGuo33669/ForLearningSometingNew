@@ -15,21 +15,25 @@ public class AccountCheck {
 
 	private String idString = "";
 	private String pwdString = "";
+	private String descriptionString ="";
 
 	public AccountCheck(String key) {
+		
 		// 连接数据库
 		MongoClient mongoClient = new MongoClient("localhost", 27017);
 		MongoDatabase db = mongoClient.getDatabase("mycol");
 		MongoCollection<Document> doc = db.getCollection("account");
 
+		//获取数据库内账号&密码
 		List<String> list = new ArrayList<String>();
 		list.add(key);
 		FindIterable<Document> iter = doc.find(new Document("ID", new Document("$in", list)));
 		iter.forEach(new Block<Document>() {
 			public void apply(Document _doc) {
-//				System.out.println(_doc.toJson());
+				System.out.println(_doc.toJson());
 				idString = _doc.getString("ID");
 				pwdString = _doc.getString("password");
+				descriptionString =_doc.getString("description");
 			}
 		});
 	}
@@ -41,17 +45,26 @@ public class AccountCheck {
 		return pwdString;
 	}
 
-	public static void main(String args[]) {
-
-		try {
-
-			AccountCheck accountCheck = new AccountCheck("admin");
-			System.out.println("账号"+accountCheck.getIdString());
-			System.out.println("密码"+accountCheck.getpwdString());
+	public String getDescriptionString() {
+		return descriptionString;
+	}
+	// 测试类
+	public static class Test{
+		
+		public Test(String key) {
+			try {
+				AccountCheck accountCheck = new AccountCheck(key);
+				System.out.println("账号"+accountCheck.getIdString());
+				System.out.println("密码"+accountCheck.getpwdString());	
+			} catch (Exception e) {
+				System.err.println(e.getClass().getName() + ": " + e.getMessage());
+			}
 			
-			
-		} catch (Exception e) {
-			System.err.println(e.getClass().getName() + ": " + e.getMessage());
 		}
 	}
+	public static void main(String args[]) {
+		new Test("09");
+	}
 }
+
+

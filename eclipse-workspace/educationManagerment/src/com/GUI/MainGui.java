@@ -16,6 +16,7 @@ public class MainGui extends JFrame implements ActionListener{
 	private stuMod stumod=null;
 	private JScrollPane jScrollPane=null;
 	private JPanel jp=null;
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		MainGui mainGui=new MainGui();

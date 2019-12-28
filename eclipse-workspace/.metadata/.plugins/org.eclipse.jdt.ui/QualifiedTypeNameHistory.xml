@@ -15,11 +15,7 @@
 <fullyQualifiedTypeName name="com.mongodb.DBCursor"/>
 <fullyQualifiedTypeName name="com.mongodb.BasicDBList"/>
 <fullyQualifiedTypeName name="com.mongodb.DBCollection"/>
-<fullyQualifiedTypeName name="com.mongodb.BasicDBObject"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.GUI.accountDatabase"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="com.GUI.accountCheck"/>
 <fullyQualifiedTypeName name="com.GUI.AccountCheck"/>
 <fullyQualifiedTypeName name="com.sun.org.apache.xalan.internal.xsltc.compiler.sym"/>
@@ -28,6 +24,24 @@
 <fullyQualifiedTypeName name="com.GUI.Adddata"/>
 <fullyQualifiedTypeName name="javax.swing.JPasswordField"/>
 <fullyQualifiedTypeName name="java.awt.event.FocusListener"/>
-<fullyQualifiedTypeName name="com.GUI.Login"/>
 <fullyQualifiedTypeName name="com.GUI.Login_new"/>
+<fullyQualifiedTypeName name="com.domain.Student"/>
+<fullyQualifiedTypeName name="java.lang.Double"/>
+<fullyQualifiedTypeName name="com.GUI.AccountCheck.Test"/>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="com.GUI.Login"/>
+<fullyQualifiedTypeName name="jdk.vm.ci.meta.Assumptions.ConcreteMethod"/>
+<fullyQualifiedTypeName name="com.sun.tools.javac.resources.compiler"/>
+<fullyQualifiedTypeName name="com.Model.stuMod"/>
+<fullyQualifiedTypeName name="com.mongodb.client.MongoCollection"/>
+<fullyQualifiedTypeName name="com.mongodb.MongoClient"/>
+<fullyQualifiedTypeName name="com.mongodb.client.MongoDatabase"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="com.service.GenerateAccount.Test"/>
+<fullyQualifiedTypeName name="org.bson.Document"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.service.GenerateAccount"/>
+<fullyQualifiedTypeName name="com.mongodb.BasicDBObject"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>

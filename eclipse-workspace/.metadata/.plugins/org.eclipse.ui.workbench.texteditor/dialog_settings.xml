@@ -6,36 +6,44 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="resetButton"/>
+		<item key="selection" value="doc"/>
 		<list key="findhistory">
-			<item value="ResetButton"/>
-			<item value="ConfirmButton"/>
-			<item value="PasswordText"/>
-			<item value="PasswordTest"/>
-			<item value="PasswordNumber"/>
-			<item value="IDNumber"/>
-			<item value="IDText"/>
-			<item value="JFrame "/>
-			<item value="location"/>
-			<item value="用户名"/>
-			<item value="账号"/>
-			<item value="Card"/>
-			<item value="package com.DAO;"/>
+			<item value="doc"/>
+			<item value="getIdString"/>
+			<item value="documents"/>
+			<item value="stumod"/>
+			<item value="dispose"/>
+			<item value="float"/>
+			<item value="Student"/>
+			<item value="Real_credit"/>
+			<item value="setReal_credit"/>
+			<item value="Integer"/>
+			<item value="setExaminationScore"/>
+			<item value="All_credit"/>
+			<item value="Credit3"/>
+			<item value="Credit2"/>
+			<item value="Credit_Hour"/>
 		</list>
 		<list key="replacehistory">
+			<item value="tableMod"/>
+			<item value="double"/>
+			<item value="realCredit"/>
+			<item value="comprehensiveScore"/>
+			<item value="examinationScore"/>
+			<item value="experimentalScore"/>
+			<item value="creditHour"/>
+			<item value="regularScore"/>
+			<item value="RegularScore"/>
+			<item value="mainUI"/>
 			<item value="resetButton"/>
 			<item value="confirmButton"/>
 			<item value="passwordText"/>
 			<item value="passwordNumber"/>
 			<item value="idNumber"/>
-			<item value="idText"/>
-			<item value="账号"/>
-			<item value="用户名"/>
-			<item value="Password"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="-271"/>
+		<item key="DIALOG_X_ORIGIN" value="8"/>
 		<item key="DIALOG_Y_ORIGIN" value="308"/>
 		<item key="DIALOG_WIDTH" value="278"/>
 		<item key="DIALOG_HEIGHT" value="410"/>
