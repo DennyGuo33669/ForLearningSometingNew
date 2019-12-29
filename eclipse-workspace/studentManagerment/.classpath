@@ -9,5 +9,8 @@
 	<classpathentry kind="lib" path="C:/Users/Denny/Desktop/Coding/LearningSometingNew/eclipse-workspace/studentManagerment/lib/bson/3.5.0/bson-3.5.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Denny/Desktop/Coding/LearningSometingNew/eclipse-workspace/studentManagerment/lib/mongodb-driver/3.5.0/mongodb-driver-3.5.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Denny/Desktop/Coding/LearningSometingNew/eclipse-workspace/studentManagerment/lib/mongodb-driver-core/3.5.0/mongodb-driver-core-3.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Denny/Desktop/Coding/LearningSometingNew/eclipse-workspace/studentManagerment/lib/gson-2.8.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Denny/Desktop/Coding/LearningSometingNew/eclipse-workspace/studentManagerment/lib/fastjson-1.2.62.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Denny/Desktop/Coding/LearningSometingNew/eclipse-workspace/studentManagerment/lib/json-20190722.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

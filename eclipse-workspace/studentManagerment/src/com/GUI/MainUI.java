@@ -13,7 +13,7 @@ public class MainUI extends JFrame implements ActionListener {
 	private JTable jTable = null;
 	private JScrollPane jScrollPane = null;
 	private JPanel jp = null;
-	private TableMod tableMod =null;
+	private StuTableMod stuTableMod =null;
 
 	public MainUI() {
 
@@ -58,16 +58,16 @@ public class MainUI extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if("find".equals(e.getActionCommand())) {
 			if(!jTextField.getText().equals("")) {
-				tableMod=new TableMod(jTextField.getText());
+				stuTableMod=new StuTableMod(jTextField.getText());
 			}else {
-				tableMod=new TableMod();
+				stuTableMod=new StuTableMod();
 			}
-			jTable.setModel(tableMod);
+			jTable.setModel(stuTableMod);
 			
 		}else if("insert".equals(e.getActionCommand())){
 			AddData addData=new AddData(this, "添加学生成绩", true);
-			tableMod=new TableMod();
-			jTable.setModel(tableMod);
+			stuTableMod=new StuTableMod();
+			jTable.setModel(stuTableMod);
 		}
 	}
 	

@@ -1,5 +1,6 @@
 package com.service;
 import java.sql.*;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,6 +14,10 @@ public class stuService {
 
 	public void insertStu(Student student) {
 
+		//保留小数点1位
+		DecimalFormat df = new DecimalFormat("#.0"); 
+		
+		df.format(student.getRealcredit());
 		// 连接到 mongodb 服务
         MongoClient mongoClient = new MongoClient( "localhost" , 27017 );
         
@@ -32,12 +37,12 @@ public class stuService {
         append("平时成绩", student.getRregularScore()).
         append("实验成绩", student.getExperimentalScore()).
         append("卷面成绩", student.getExaminationScore()).
-        append("综合成绩", student.getComprehensiveScore()).
-        append("实得学分", student.getRealcredit());
+        append("综合成绩", df.format(student.getComprehensiveScore())).
+        append("实得学分", df.format(student.getRealcredit()));
         List<Document> documents = new ArrayList<Document>();  
         documents.add(document);  
         collection.insertMany(documents);  
-        System.out.println("文档插入成功"); 
+        System.out.println("成绩添加成功"); 
         
         // 生成学生账号
         new GenerateAccount(student.getStuNo());

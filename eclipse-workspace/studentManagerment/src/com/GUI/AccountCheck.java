@@ -25,17 +25,17 @@ public class AccountCheck {
 		MongoCollection<Document> doc = db.getCollection("account");
 
 		//获取数据库内账号&密码
-		List<String> list = new ArrayList<String>();
-		list.add(key);
-		FindIterable<Document> iter = doc.find(new Document("ID", new Document("$in", list)));
-		iter.forEach(new Block<Document>() {
-			public void apply(Document _doc) {
-				System.out.println(_doc.toJson());
-				idString = _doc.getString("ID");
-				pwdString = _doc.getString("password");
-				descriptionString =_doc.getString("description");
-			}
-		});
+				List<String> list = new ArrayList<String>();
+				list.add(key);
+				FindIterable<Document> iter = doc.find(new Document("ID", new Document("$in", list)));
+				iter.forEach(new Block<Document>() {
+					public void apply(Document _doc) {
+						System.out.println(_doc.toJson());
+						idString = _doc.getString("ID");
+						pwdString = _doc.getString("password");
+						descriptionString =_doc.getString("description");
+					}
+				});
 	}
 	
 	public String getIdString() {

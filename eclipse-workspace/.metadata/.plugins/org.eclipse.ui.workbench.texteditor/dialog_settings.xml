@@ -6,8 +6,15 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="doc"/>
+		<item key="selection" value="String"/>
 		<list key="findhistory">
+			<item value="double"/>
+			<item value="return;"/>
+			<item value="getActionCommand"/>
+			<item value="tableMod"/>
+			<item value="stuTableMod"/>
+			<item value="rawtypes"/>
+			<item value="serialVersionUID"/>
 			<item value="doc"/>
 			<item value="getIdString"/>
 			<item value="documents"/>
@@ -16,15 +23,12 @@
 			<item value="float"/>
 			<item value="Student"/>
 			<item value="Real_credit"/>
-			<item value="setReal_credit"/>
-			<item value="Integer"/>
-			<item value="setExaminationScore"/>
-			<item value="All_credit"/>
-			<item value="Credit3"/>
-			<item value="Credit2"/>
-			<item value="Credit_Hour"/>
 		</list>
 		<list key="replacehistory">
+			<item value="String"/>
+			<item value=""/>
+			<item value="stuTableMod"/>
+			<item value="StuTableMod"/>
 			<item value="tableMod"/>
 			<item value="double"/>
 			<item value="realCredit"/>
@@ -36,10 +40,6 @@
 			<item value="RegularScore"/>
 			<item value="mainUI"/>
 			<item value="resetButton"/>
-			<item value="confirmButton"/>
-			<item value="passwordText"/>
-			<item value="passwordNumber"/>
-			<item value="idNumber"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
