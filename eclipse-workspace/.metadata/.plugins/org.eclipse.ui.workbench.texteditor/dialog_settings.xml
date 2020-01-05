@@ -6,44 +6,44 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="String"/>
+		<item key="selection" value="jTable"/>
 		<list key="findhistory">
+			<item value="jTable"/>
+			<item value="jTabel"/>
+			<item value="str9"/>
+			<item value="str8"/>
+			<item value="str7"/>
+			<item value="str6"/>
+			<item value="str5"/>
+			<item value="5"/>
 			<item value="double"/>
-			<item value="return;"/>
-			<item value="getActionCommand"/>
-			<item value="tableMod"/>
-			<item value="stuTableMod"/>
-			<item value="rawtypes"/>
-			<item value="serialVersionUID"/>
-			<item value="doc"/>
-			<item value="getIdString"/>
-			<item value="documents"/>
-			<item value="stumod"/>
-			<item value="dispose"/>
-			<item value="float"/>
-			<item value="Student"/>
-			<item value="Real_credit"/>
+			<item value="str4"/>
+			<item value="str3"/>
+			<item value="str2"/>
+			<item value="str1"/>
+			<item value=" getColumnName"/>
+			<item value="ModelDemo"/>
 		</list>
 		<list key="replacehistory">
-			<item value="String"/>
-			<item value=""/>
-			<item value="stuTableMod"/>
-			<item value="StuTableMod"/>
-			<item value="tableMod"/>
-			<item value="double"/>
 			<item value="realCredit"/>
 			<item value="comprehensiveScore"/>
 			<item value="examinationScore"/>
 			<item value="experimentalScore"/>
-			<item value="creditHour"/>
 			<item value="regularScore"/>
-			<item value="RegularScore"/>
-			<item value="mainUI"/>
-			<item value="resetButton"/>
+			<item value="String"/>
+			<item value="creditHour"/>
+			<item value="className"/>
+			<item value="classNo"/>
+			<item value="stuNo"/>
+			<item value="testMod"/>
+			<item value=""/>
+			<item value="stuTableMod"/>
+			<item value="StuTableMod"/>
+			<item value="tableMod"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="8"/>
+		<item key="DIALOG_X_ORIGIN" value="66"/>
 		<item key="DIALOG_Y_ORIGIN" value="308"/>
 		<item key="DIALOG_WIDTH" value="278"/>
 		<item key="DIALOG_HEIGHT" value="410"/>

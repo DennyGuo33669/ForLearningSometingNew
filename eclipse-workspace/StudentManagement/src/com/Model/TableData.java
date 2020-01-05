@@ -2,6 +2,7 @@ package com.Model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
 import org.bson.Document;
 
@@ -15,7 +16,18 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
 public class TableData {
+	private List<String> tbValue = new ArrayList<String>();
+	 List<String> stuNo = new ArrayList<String>();
+	 List<String> classNo = new ArrayList<String>();
+	 List<String> className = new ArrayList<String>();
+	 List<String> creditHour = new ArrayList<String>();
+	 List<String> regularScore = new ArrayList<String>();
+	 List<String> experimentalScore = new ArrayList<String>();
+	 List<String> examinationScore = new ArrayList<String>();
+	 List<String> comprehensiveScore = new ArrayList<String>();
+	 List<String> realCredit = new ArrayList<String>();
 
+	
 	public TableData() {
 		// 连接数据库
 		MongoClient mongoClient = new MongoClient("localhost", 27017);
@@ -43,37 +55,91 @@ public class TableData {
 		};
 
 		iter.forEach(block);
+for(int i = 0;i<resultList.size();i++) {
 
-		// 解析JSON数据
-		JSONObject jsonObject = JSONObject.parseObject(resultList.get(0).toJson());
-		Student student = new Student();
-		student.setStuNo(jsonObject.getString("学号"));
-		student.setClassNo(jsonObject.getString("课程编号"));
-		student.setClassName(jsonObject.getString("课程名称"));
-		student.setCreditHour(Double.valueOf(jsonObject.getString("学分")));
-		student.setRregularScore(Double.valueOf(jsonObject.getString("平时成绩")));
-		student.setExperimentalScore(Double.valueOf(jsonObject.getString("实验成绩")));
-		student.setExaminationScore(Double.valueOf(jsonObject.getString("卷面成绩")));
-		if (jsonObject.getString("综合成绩").equals("")) {
-			student.setComprehensiveScore(0);
-		} else {
-			student.setComprehensiveScore(Double.valueOf(jsonObject.getString("综合成绩")));
+	// 解析JSON数据
+	JSONObject jsonObject = JSONObject.parseObject(resultList.get(i).toJson());
+	stuNo.add(jsonObject.getString("学号"));
+	classNo.add(jsonObject.getString("课程编号"));
+	className.add(jsonObject.getString("课程名称"));
+	creditHour.add(jsonObject.getString("学分"));
+	regularScore.add(jsonObject.getString("平时成绩"));
+	experimentalScore.add(jsonObject.getString("实验成绩"));
+	examinationScore.add(jsonObject.getString("卷面成绩"));
+	comprehensiveScore.add(jsonObject.getString("综合成绩"));
+	realCredit.add(jsonObject.getString("实得学分"));
+	System.out.println(stuNo.get(i));
 
-		}
+}
 
-		if (jsonObject.getString("实得学分").equals("")) {
-			student.setRealcredit(0);
-		} else {
-			student.setRealcredit(Double.valueOf(jsonObject.getString("实得学分")));
-		}
 
-		System.out.println(student.getStuNo() + " | " + student.getClassNo() + " | " + student.getClassName() + " | "
-				+ student.getCreditHour() + " | " + student.getRregularScore() + " | " + student.getExperimentalScore()
-				+ " | " + student.getExaminationScore() + " | " + student.getComprehensiveScore() + " | "
-				+ student.getRealcredit());
-
+System.out.println(tbValue);
 	}
 
+	public List getTbValue() {
+
+		return tbValue;
+	}
+	
+	
+	
+	
+//	
+//	
+//	public String getStuNo() {
+//		return stuNo;
+//	}
+//	public void setStuNo(String stuNo) {
+//		this.stuNo = stuNo;
+//	}
+//	public String getClassNo() {
+//		return classNo;
+//	}
+//	public void setClassNo(String classNo) {
+//		this.classNo = classNo;
+//	}
+//	public String getClassName() {
+//		return className;
+//	}
+//	public void setClassName(String className) {
+//		this.className = className;
+//	}
+//	public String getCreditHour() {
+//		return creditHour;
+//	}
+//	public void setCreditHour(String creditHour) {
+//		this.creditHour = creditHour;
+//	}
+//	public String getRregularScore() {
+//		return regularScore;
+//	}
+//	public void setRregularScore(String regularScore) {
+//		this.regularScore = regularScore;
+//	}
+//	public String getExperimentalScore() {
+//		return experimentalScore;
+//	}
+//	public void setExperimentalScore(String experimentalScore) {
+//		this.experimentalScore = experimentalScore;
+//	}
+//	public String getExaminationScore() {
+//		return examinationScore;
+//	}
+//	public void setExaminationScore(String examinationScore) {
+//		this.examinationScore = examinationScore;
+//	}
+//	public String getComprehensiveScore() {
+//		return comprehensiveScore;
+//	}
+//	public void setComprehensiveScore(String comprehensiveScore) {
+//		this.comprehensiveScore = comprehensiveScore;
+//	}
+//	public String getRealcredit() {
+//		return realCredit;
+//	}
+//	public void setRealcredit(String realCredit) {
+//		this.realCredit = realCredit;
+//	}
 	public static void main(String[] args) {
 		new TableData();
 

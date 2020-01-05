@@ -2,7 +2,7 @@ package com.GUI;
 
 import javax.swing.*;
 
-import com.Model.stuMod;
+import com.Model.stuMod_1;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -13,7 +13,7 @@ public class MainGui extends JFrame implements ActionListener{
 	private JPanel jPanel=null;
 	private JButton jButton_find=null,jButton_insert=null;
 	private JTable jTable=null;
-	private stuMod stumod=null;
+	private stuMod_1 stumod=null;
 	private JScrollPane jScrollPane=null;
 	private JPanel jp=null;
 	
@@ -44,7 +44,7 @@ public class MainGui extends JFrame implements ActionListener{
 		jPanel.add(jTextField);
 		jPanel.add(jButton_find);
 		
-		stumod=new stuMod();
+		stumod=new stuMod_1();
 		jTable=new JTable(stumod);
 		
 		jScrollPane=new JScrollPane(jTable);
@@ -65,15 +65,15 @@ public class MainGui extends JFrame implements ActionListener{
 		// TODO Auto-generated method stub
 		if("find".equals(e.getActionCommand())) {
 			if(!jTextField.getText().equals("")) {
-				stumod=new stuMod(jTextField.getText());
+				stumod=new stuMod_1(jTextField.getText());
 			}else {
-				stumod=new stuMod();
+				stumod=new stuMod_1();
 			}
 			jTable.setModel(stumod);
 			
 		}else if("insert".equals(e.getActionCommand())){
 			stuAddDialog stuAddDialog=new stuAddDialog(this, "添加学生成绩", true);
-			stumod=new stuMod();
+			stumod=new stuMod_1();
 			jTable.setModel(stumod);
 		}
 	}

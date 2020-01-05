@@ -41,6 +41,7 @@ public class stuService {
         append("实得学分", df.format(student.getRealcredit()));
         List<Document> documents = new ArrayList<Document>();  
         documents.add(document);  
+        
         collection.insertMany(documents);  
         System.out.println("成绩添加成功"); 
         

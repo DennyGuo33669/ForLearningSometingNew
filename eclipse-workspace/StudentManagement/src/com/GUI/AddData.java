@@ -87,7 +87,7 @@ public class AddData extends JDialog implements ActionListener {
 			double experimentalScore;
 			double examinationScore;
 			
-
+			
 			//  ‰»Î–£—È
 			if (!jt4.getText().equals("") && !jt5.getText().equals("") && !jt6.getText().equals("")
 					&& !jt7.getText().equals("") && !jt1.getText().equals("") && !jt2.getText().equals("")

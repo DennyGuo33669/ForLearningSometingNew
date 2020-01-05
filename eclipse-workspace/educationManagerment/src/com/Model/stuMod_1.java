@@ -8,7 +8,7 @@ import java.util.Vector;
 
 import javax.swing.table.AbstractTableModel;
 import com.Dao.*;
-public class stuMod extends AbstractTableModel{
+public class stuMod_1 extends AbstractTableModel{
 
 	/**
 	 * 
@@ -27,19 +27,19 @@ public class stuMod extends AbstractTableModel{
 	
 	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
-	public stuMod() {
+	public stuMod_1() {
 		sqlConnection=SqlConnection.getInstace();
 		sqlConnection.init();
 		colunmNames=new Vector<String>();
-		colunmNames.add("Ñ§ºÅ");
-		colunmNames.add("¿Î³Ì±àºÅ");
-		colunmNames.add("¿Î³ÌÃû³Æ");
-		colunmNames.add("Ñ§·Ö");
-		colunmNames.add("Æ½Ê±³É¼¨");
-		colunmNames.add("ÊµÑé³É¼¨");
-		colunmNames.add("¾íÃæ³É¼¨");
-		colunmNames.add("×ÛºÏ³É¼¨");
-		colunmNames.add("ÊµµÃÑ§·Ö");
+		colunmNames.add("Ñ§ï¿½ï¿½");
+		colunmNames.add("ï¿½Î³Ì±ï¿½ï¿½");
+		colunmNames.add("ï¿½Î³ï¿½ï¿½ï¿½ï¿½ï¿½");
+		colunmNames.add("Ñ§ï¿½ï¿½");
+		colunmNames.add("Æ½Ê±ï¿½É¼ï¿½");
+		colunmNames.add("Êµï¿½ï¿½É¼ï¿½");
+		colunmNames.add("ï¿½ï¿½ï¿½ï¿½É¼ï¿½");
+		colunmNames.add("ï¿½ÛºÏ³É¼ï¿½");
+		colunmNames.add("Êµï¿½ï¿½Ñ§ï¿½ï¿½");
 		connection=sqlConnection.getConnection();
 		try {
 			preparedStatement=connection.prepareStatement("select * from score");
@@ -72,20 +72,20 @@ public class stuMod extends AbstractTableModel{
 		
 	}
 	
-	public stuMod(String stuNo) {
+	public stuMod_1(String stuNo) {
 		
 			sqlConnection=SqlConnection.getInstace();
 			sqlConnection.init();
 			colunmNames=new Vector<String>();
-			colunmNames.add("Ñ§ºÅ");
-			colunmNames.add("¿Î³Ì±àºÅ");
-			colunmNames.add("¿Î³ÌÃû³Æ");
-			colunmNames.add("Ñ§·Ö");
-			colunmNames.add("Æ½Ê±³É¼¨");
-			colunmNames.add("ÊµÑé³É¼¨");
-			colunmNames.add("¾íÃæ³É¼¨");
-			colunmNames.add("×ÛºÏ³É¼¨");
-			colunmNames.add("ÊµµÃÑ§·Ö");
+			colunmNames.add("Ñ§ï¿½ï¿½");
+			colunmNames.add("ï¿½Î³Ì±ï¿½ï¿½");
+			colunmNames.add("ï¿½Î³ï¿½ï¿½ï¿½ï¿½ï¿½");
+			colunmNames.add("Ñ§ï¿½ï¿½");
+			colunmNames.add("Æ½Ê±ï¿½É¼ï¿½");
+			colunmNames.add("Êµï¿½ï¿½É¼ï¿½");
+			colunmNames.add("ï¿½ï¿½ï¿½ï¿½É¼ï¿½");
+			colunmNames.add("ï¿½ÛºÏ³É¼ï¿½");
+			colunmNames.add("Êµï¿½ï¿½Ñ§ï¿½ï¿½");
 			connection=sqlConnection.getConnection();
 			try {
 				preparedStatement=connection.prepareStatement("select * from score where stuNo=?");
