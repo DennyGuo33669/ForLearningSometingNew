@@ -9,7 +9,7 @@ var fs = require('fs');
 //     components.push(item);
 //   }
 // });
-var readDir = fs.readdirSync('D:\\下载\\BT Backup\\BT种子 Download Later\\迅雷', 'utf8');
+var readDir = fs.readdirSync('D:\\下载\\BT Backup\\BT种子 Download Later\\迅雷\\', 'utf8');
 console.log(`文件数目:${readDir.length}\n文件如下:`);
 // console.log(readDir);
 readDir.forEach(item => console.log(item));
