@@ -1,13 +1,8 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<!--pages/index/index.wxml-->
+<view class="indexContainer">
+  <image class="avatar" src="/images/index/[图片] [2019-06-20] 色卡.jpg"></image>
+  <text class="userName"> hello {{msg}}</text>
+<view catchtap="handleParent" class="goStudy">
+  <text catchtap="handleChild">开启小程序之旅</text>
+</view>
 </view>
