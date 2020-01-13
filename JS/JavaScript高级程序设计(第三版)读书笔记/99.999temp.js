@@ -109,18 +109,8 @@
 // // 取消
 // clearTimeout(timeoutId);
 
-var num = 0;
-var max = 10;
+// 显示 "打印" 对话框
+window.print();
 
-var incrementNumber = () => {
-  num++;
-
-  // 如果执行次数未达到了max值,则设置另一次超时调用
-  if (num < max) {
-    setTimeout(incrementNumber, 500);
-  } else {
-    alert('Done');
-  }
-};
-
-setTimeout(incrementNumber, 500);
+// 显示 "查找" 对话框
+window.find();
