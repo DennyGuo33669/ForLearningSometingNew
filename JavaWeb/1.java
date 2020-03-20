@@ -1,25 +1,17 @@
-package com.gzw.Servlet;
+<?xml version="1.0"enconding="UTF-8"?>
+<web-app xmls="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsl="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalLocation="http://xmlns.jcp.org/xml/ns/javaeehttp:// xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1" metadata-complete="true">
+  <context-param>
+    <param-name>school</param-name>
+    <param-value>stu</param-value>
+  </context-param>
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
+  <servlet>
+    <servlet-name>myFirstServlet<servlet-name>
+        <servlet-class>com.bjsxt.stumgr.servlet.myFirstervlet<servlet-class>
+            <init-param>
+              <param-name>encoding</param-name>
+              <param-value>gbk</param-value>
+            </init-param>
 
-@WebServlet({ "/login" })
-public class ServletDemoSJ extends HttpServlet {
-
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String username = req.getParameter("username");
-        String password = req.getParameter("password");
-        if ("admin".equalsIgnoreCase(username) && "123456".equalsIgnoreCase(password)) {
-            resp.getWriter().print("欢迎。。。");
-        } else {
-            resp.getWriter().print("用户名或密码错误。。。");
-        }
-
-    }
-
-}
+            <servlet>
+</web-app>

@@ -1,0 +1,1 @@
+// Empty(L) 判空操作. 若L为空表,则返回true,否则返回false
