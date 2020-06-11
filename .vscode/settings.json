@@ -18,5 +18,6 @@
         "worl",
         "yetanotherframe",
         "zakas"
-    ]
+    ],
+    "C_Cpp.errorSquiggles": "Disabled"
 }

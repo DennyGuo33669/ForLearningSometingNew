@@ -3,7 +3,6 @@
 using namespace std;
 
 bool ListInsert(SqList &L, int i, ElemType e) {
-  
   // 判断插入位置是否正确
   if (i < 1 || i > L.length + 1) {
     return false;
@@ -28,5 +27,7 @@ bool ListInsert(SqList &L, int i, ElemType e) {
 
 int main() {
   cout << "Hello World!" << endl;
+
+  ListInsert(L, 3, 'e');
   return 0;
 }

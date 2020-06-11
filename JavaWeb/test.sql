@@ -1,0 +1,10 @@
+url
+=
+jdbc:
+mysql:
+//
+localhost:
+3306/test?useUnicode=true&characterEncoding=utf8
+driver=com.mysql.jdbc.Driver
+username=root
+password=123456

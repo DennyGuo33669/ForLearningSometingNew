@@ -1,0 +1,65 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Insert title here</title>
+</head>
+
+<body>
+  <%
+  　　Cookie cookie1=new Cookie("film","A-Chinese-odyssey");
+  　　Cookie cookie2=new Cookie("director","zhenweiLiu");
+  　　Cookie cookie3=new Cookie("["theme-song"]","love-for-life");
+  　　Cookie cookie4=new Cookie("hero","xingchiZhou");
+  　　Cookie cookie5=new Cookie("heroine","Yinzhu");
+ 　　 response.addCookie(cookie1);
+ 　　 response.addCookie(cookie2);
+ 　　 response.addCookie(cookie3);
+ 　　 response.addCookie(cookie4);
+ 　　 response.addCookie(cookie5);
+   %>
+  <table border="1">
+    <thead style="font-weight:bolder">
+      <tr>
+        <td>表达式</td>
+        <td>值</td>
+        <td>说明</td>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>"${cookie.film.value}"</td>
+        <td>${cookie.film.value}</td>
+        <td>电影名</td>
+      </tr>
+      <tr>
+        <td>"${cookie.director.value}"</td>
+        <td>${cookie.director.value}</td>
+        <td>导演</td>
+      </tr>
+      <tr>
+        <td>"${cookie.["theme-song"].value}"</td>
+        <td>${cookie.["theme-song"].value}</td>
+        <td>主题曲</td>
+      </tr>
+      <tr>
+        <td>"${cookie.hero.value}"</td>
+        <td>${cookie.hero.value}</td>
+        <td>男主角</td>
+      </tr>
+      <tr>
+        <td>"${cookie.heroine.value}"</td>
+        <td>${cookie.heroine.value}</td>
+        <td>女主角</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</body>
+
+</html>
