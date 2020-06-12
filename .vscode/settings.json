@@ -19,5 +19,6 @@
         "yetanotherframe",
         "zakas"
     ],
-    "C_Cpp.errorSquiggles": "Disabled"
+    "C_Cpp.errorSquiggles": "Disabled",
+    "python.pythonPath": "C:\\Users\\Denny\\AppData\\Local\\Programs\\Python\\Python38\\python.exe"
 }
