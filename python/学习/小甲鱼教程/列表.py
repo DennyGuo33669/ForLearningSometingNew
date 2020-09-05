@@ -58,14 +58,26 @@ print(heros)
 heros[3:] = ["武松", "林冲", "李逵"]
 print(heros)
 
+# # nums = [3, 1, 9, 6, 8, 3, 5, 3]
+
+# # nums.sort()
+# # print(nums)
+
+# # nums.reverse()
+# # print(nums)
+
 # nums = [3, 1, 9, 6, 8, 3, 5, 3]
-
-# nums.sort()
+# nums.sort(reverse=True)
 # print(nums)
 
-# nums.reverse()
-# print(nums)
+# 查找
+nums = [2, 1, 9, 6, 8, 2, 5, 2]
+print(nums.count(2))
 
-nums = [3, 1, 9, 6, 8, 3, 5, 3]
-nums.sort(reverse=True)
-print(nums)
+print(heros.index("绿巨人"))
+heros[heros.index("绿巨人")] = "神奇女侠"
+print(heros)
+
+
+nums_copy1 = nums.copy()
+print(nums_copy1)
