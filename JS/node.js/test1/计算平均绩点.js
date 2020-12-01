@@ -6,7 +6,7 @@ MongoClient.connect(url, { useNewUrlParser: true }, function (err, db) {
   if (err) throw err;
   const dbo = db.db('mycol');
   const whereStr = { }; // 查询条件
-  const colName = ['三江分数_郭子文', '三江分数_张秋晨'];
+  const colName = ['三江分数_郭子文', ''];
   const who = colName[1];
   dbo.collection(who).find(whereStr).toArray(function (err, result) {
     if (err) throw err;

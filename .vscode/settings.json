@@ -11,6 +11,7 @@
         "compat",
         "fullscreen",
         "instanceof",
+        "pymongo",
         "scrollbars",
         "substr",
         "todos",
