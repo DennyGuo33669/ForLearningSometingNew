@@ -90,5 +90,3 @@ output = ''
 for ch in phone:
     output += digits_mapping.get(ch, '!') + ' '
 print(output)
-
-NAME = 'DENNY'
