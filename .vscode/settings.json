@@ -11,6 +11,7 @@
         "compat",
         "fullscreen",
         "instanceof",
+        "openpyxl",
         "pymongo",
         "scrollbars",
         "substr",
@@ -21,6 +22,6 @@
         "zakas"
     ],
     "C_Cpp.errorSquiggles": "Disabled",
-    "python.pythonPath": "C:\\Users\\Denny\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+    "python.pythonPath": "C:\\Users\\10845\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
     //  "python.autoComplete.extraPaths": ["./src"]  
 }

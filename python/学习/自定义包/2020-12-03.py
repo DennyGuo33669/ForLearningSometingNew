@@ -156,11 +156,73 @@
 # print(converters.lbs_to_kg(70))
 
 
-from utils import find_max
+# # from utils import find_max
+# import utils
+# numbers = [10, 3, 6, 2]
+# print(utils.find_max(numbers))
 
-numbers = [10, 3, 6, 2]
-print(find_max(numbers))
+# # 这里是一条更新 来自笔记本电脑
 
-# 这里是一条更新 来自笔记本电脑
+# # 这是另一条更新
 
-# 这是另一条更新
+# from ecommerce import shipping
+# shipping.calc_shipping()
+
+# import random
+# # for i in range(3):
+# #     print(random.randint(10, 20))
+
+# members = ['John', 'Mary', 'Bob', 'Mosh']
+# leader = random.choice(members)
+# print(leader)
+
+# import random
+
+
+# class Dice:
+#     def roll(self):
+#         first = random.randint(1, 6)
+#         second = random.randint(1, 6)
+#         return first, second
+
+
+# dice = Dice()
+# print(dice.roll())
+
+# from pathlib import Path
+
+# path = Path()
+
+# for i in path.glob('python\学习\*'):
+#     print(i)
+
+import openpyxl as xl
+from openpyxl.chart import BarChart, Reference
+
+
+def process_workbook(filename):
+    wb = xl.load_workbook(filename)
+    sheet = wb['Sheet1']
+    # cell = sheet['a1']
+    # cell = sheet.cell(1, 1)
+    # # print(sheet.max_row)
+
+    for row in range(2, sheet.max_row + 1):
+        cell = sheet.cell(row, 3)
+        corrected_price = cell.value * 0.9
+        corrected_price_cell = sheet.cell(row, 4)
+        corrected_price_cell.value = corrected_price
+
+    values = Reference(sheet,
+                       min_row=2,
+                       max_row=sheet.max_row,
+                       min_col=4,
+                       max_col=4)
+
+    chart = BarChart()
+    chart.add_data(values)
+    sheet.add_chart(chart, 'e2')
+    wb.save(filename)
+
+
+process_workbook(r"python\学习\自定义包\transactions.xlsx")
