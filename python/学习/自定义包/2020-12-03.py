@@ -190,17 +190,16 @@
 # print(dice.roll())
 
 
-from pathlib import Path
+# from pathlib import Path
 
-path = Path()
+# path = Path()
 
-# print(path.resolve())
 # for i in path.glob(r'数据结构/*'):
 #     print(i.name)
 
-x = Path(r'E:\临时porn\H265\Censored').iterdir()
-for p in x:
-    print(p.name)
+# x = Path(r'E:\临时porn\H265\Censored').iterdir()
+# for p in x:
+#     print(p.name)
 
 # import openpyxl as xl
 # from openpyxl.chart import BarChart, Reference
