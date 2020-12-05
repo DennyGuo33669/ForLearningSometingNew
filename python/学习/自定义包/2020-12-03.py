@@ -189,40 +189,40 @@
 # dice = Dice()
 # print(dice.roll())
 
-# from pathlib import Path
+from pathlib import Path
 
-# path = Path()
+path = Path()
 
-# for i in path.glob('python\学习\*'):
-#     print(i)
+for i in path.glob(r"python\学习\自定义包\*"):
+    print(i)
 
-import openpyxl as xl
-from openpyxl.chart import BarChart, Reference
-
-
-def process_workbook(filename):
-    wb = xl.load_workbook(filename)
-    sheet = wb['Sheet1']
-    # cell = sheet['a1']
-    # cell = sheet.cell(1, 1)
-    # # print(sheet.max_row)
-
-    for row in range(2, sheet.max_row + 1):
-        cell = sheet.cell(row, 3)
-        corrected_price = cell.value * 0.9
-        corrected_price_cell = sheet.cell(row, 4)
-        corrected_price_cell.value = corrected_price
-
-    values = Reference(sheet,
-                       min_row=2,
-                       max_row=sheet.max_row,
-                       min_col=4,
-                       max_col=4)
-
-    chart = BarChart()
-    chart.add_data(values)
-    sheet.add_chart(chart, 'e2')
-    wb.save(filename)
+# import openpyxl as xl
+# from openpyxl.chart import BarChart, Reference
 
 
-process_workbook(r"python\学习\自定义包\transactions.xlsx")
+# def process_workbook(filename):
+#     wb = xl.load_workbook(filename)
+#     sheet = wb['Sheet1']
+#     # cell = sheet['a1']
+#     # cell = sheet.cell(1, 1)
+#     # # print(sheet.max_row)
+
+#     for row in range(2, sheet.max_row + 1):
+#         cell = sheet.cell(row, 3)
+#         corrected_price = cell.value * 0.9
+#         corrected_price_cell = sheet.cell(row, 4)
+#         corrected_price_cell.value = corrected_price
+
+#     values = Reference(sheet,
+#                        min_row=2,
+#                        max_row=sheet.max_row,
+#                        min_col=4,
+#                        max_col=4)
+
+#     chart = BarChart()
+#     chart.add_data(values)
+#     sheet.add_chart(chart, 'e2')
+#     wb.save(filename)
+
+
+# process_workbook(r"python\学习\自定义包\transactions.xlsx")
