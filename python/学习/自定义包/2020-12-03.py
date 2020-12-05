@@ -189,12 +189,18 @@
 # dice = Dice()
 # print(dice.roll())
 
+
 from pathlib import Path
 
 path = Path()
 
-for i in path.glob(r"python\学习\自定义包\*"):
-    print(i)
+# print(path.resolve())
+# for i in path.glob(r'数据结构/*'):
+#     print(i.name)
+
+x = Path(r'E:\临时porn\H265\Censored').iterdir()
+for p in x:
+    print(p.name)
 
 # import openpyxl as xl
 # from openpyxl.chart import BarChart, Reference
