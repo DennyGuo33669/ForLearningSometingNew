@@ -2,6 +2,7 @@ import txt_operation
 import 清洗数据
 import 下载封面
 import 写入txt
+import rename
 import time
 import os
 
@@ -20,12 +21,14 @@ def 有码不行(有码待删除路径):
     txt_content = txt_operation.open_txt(
         os.path.join(url, '有码 不行.txt'))  # 打开txt
     番号数据_清洗 = 清洗数据.match_id(txt_content)
+    清洗完毕_成功 = f'清洗完毕_成功_{time.strftime(" %Y-%m-%d", time.localtime())}.txt'
+    清洗完毕_失败 = f'清洗完毕_失败_{time.strftime(" %Y-%m-%d", time.localtime())}.txt'
     txt_operation.write_txt(番号数据_清洗['id'], os.path.join(
-        url, '清洗完毕_成功.txt'))  # 清洗数据后成功的txt地址
+        url, 清洗完毕_成功))  # 清洗数据后成功的txt地址
     txt_operation.write_txt(番号数据_清洗['dismatch'], os.path.join(
-        url, '清洗完毕_失败.txt'))  # 清洗数据后失败的txt地址
+        url, 清洗完毕_失败))  # 清洗数据后失败的txt地址
 
-    data = txt_operation.open_txt(os.path.join(url, '清洗完毕_成功.txt'))
+    data = txt_operation.open_txt(os.path.join(url, 清洗完毕_成功))
 
     def star():
         count = 0
@@ -75,6 +78,8 @@ def 有码可以(有码筛选路径):
 
     data = txt_operation.open_txt(os.path.join(url, '有码可以_清洗完毕_成功.txt'))
 
+    rename.格式化本地(有码筛选路径)
+
     def star():
         count = 0
         for id in data['content']:
@@ -113,5 +118,7 @@ def 有码可以(有码筛选路径):
 
 # print(清洗数据.match_id(txt_operation.open_txt(r'C:\Users\Denny\Desktop\封面测试\有码 不行.txt'))['num'])
 
-# 有码不行(有码待删除路径)
+有码不行(有码待删除路径)
 有码可以(有码筛选路径)
+# 有码可以(r'I:\视频\porn\迅雷下载\_百度云上传')
+

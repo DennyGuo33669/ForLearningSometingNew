@@ -40,6 +40,7 @@ def write_txt(信息, url):
     with open(url, "a", encoding='utf-8', errors='ignore') as a:  # 打开文件
         for i in 信息:
             a.writelines(f'{i}\n')
+        a.writelines(f'写入{信息.__len__()}条数据\n\n')
 
     # 记录写入日期格式化成2016-03-20 11:45:39形式
     # a.writelines('\n==========================================')

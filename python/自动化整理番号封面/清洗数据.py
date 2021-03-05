@@ -12,7 +12,7 @@ def match_id(txt_content):
     for i in txt_content['content']:
         try:
             result = re.search(r'[a-zA-Z]+-[0-9]+', i).group()
-            msg['id'].append(result)
+            msg['id'].append(result.upper())
             msg['num'] += 1
             try:
                 if re.search(r'[a-zA-Z]+-[0-9]+-[Cc]|[a-zA-Z]+-[0-9]+ch|[a-zA-Z]+-[0-9]+[cC]', i).group():
