@@ -21,6 +21,7 @@ for id in id_dict["id"]:
     番号 = id
     url = 'https://www.javbus.com/'+番号
     print(url)
-    webbrowser.open(url)
+webbrowser.open(url)
 
-# print(webbrowser.get())
+
+
