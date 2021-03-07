@@ -53,7 +53,7 @@ with open(r'C:\Users\Denny\Desktop\Coding\LearningSometingNew\python\自动化�
         else:
             下载封面.保存图片(av_data, r'C:\Users\Denny\Desktop\有码待下载_封面_没有种子',
                       清洗数据={'has_chinese': []})
-        time.sleep(random.randint(6, 8))
+        time.sleep(random.randint(5, 15))
         # time.sleep(1)
 
 # with open(f'C://Users//Denny//Desktop//Coding//LearningSometingNew//python//自动化整理番号封面//有码待下载_番号_{num}.txt', "a", encoding='utf-8', errors='ignore') as a:  # 打开文件
