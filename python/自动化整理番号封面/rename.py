@@ -52,45 +52,46 @@ def 格式化本地(url):
 
         番号数据 = 下载封面.番号搜索(数据['id'][num])
         # print(番号数据)
+        标题 = re.sub("[/\:*\"<>|?]+", " ", 番号数据['标题'])
         if 数据['id'][num] in 数据['has_chinese']:
             # print(数据['id'][num]+"有中文")
             if 'favorite' in file_dict['content'][num]:
                 new_name = os.path.join(
-                    path, 数据['id'][num]+"-C "+番号数据['标题']+'[ favorite ]'+file_dict['后缀'][num])
+                    path, 数据['id'][num]+"-C "+标题+'[ favorite ]'+file_dict['后缀'][num])
             else:
                 new_name = os.path.join(
-                    path, 数据['id'][num]+"-C "+番号数据['标题']+file_dict['后缀'][num])
+                    path, 数据['id'][num]+"-C "+标题+file_dict['后缀'][num])
         else:
             try:
                 new_name = os.path.join(
-                    path, 数据['id'][num]+" "+番号数据['标题']+file_dict['后缀'][num])
-            
+                    path, 数据['id'][num]+" "+标题+file_dict['后缀'][num])
+
                 if 'favorite' in file_dict['content'][num]:
                     new_name = os.path.join(
-                        path, 数据['id'][num]+" "+番号数据['标题']+'[ favorite ]'+file_dict['后缀'][num])
+                        path, 数据['id'][num]+" "+标题+'[ favorite ]'+file_dict['后缀'][num])
                 else:
                     new_name = os.path.join(
-                        path, 数据['id'][num]+" "+番号数据['标题']+file_dict['后缀'][num])
+                        path, 数据['id'][num]+" "+标题+file_dict['后缀'][num])
             except TypeError:
                 with open(os.path.join(url, '下载失败.txt'), "a", encoding='utf-8', errors='ignore') as a:  # 打开文件
                     a.writelines(f"下载失败:{数据['id'][num]}\n")
                     a.close()
         try:
             os.rename(old_name, new_name)
-
         except FileNotFoundError:
             print("[WinError 2] 系统找不到指定的文件。")
         except FileExistsError:
             new_name = os.path.join(
-                path, 数据['id'][num]+" "+番号数据['标题']+file_dict['后缀'][num])
+                path, 数据['id'][num]+" "+标题+file_dict['后缀'][num])
             os.rename(old_name, new_name)
-        
+
+
         num += 1
         print(f'格式化前:{old_name}')
         print(f'格式化后:{new_name}')
         print(f'进度{num}/{数据["num"]}')
         print()
         print()
-        
+
 
 # 格式化本地(r'D:\python')

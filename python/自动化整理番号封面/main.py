@@ -5,7 +5,7 @@ import 写入txt
 import rename
 import time
 import os
-
+import random
 
 # url = r"D:\文档\表格\有码 不行.txt"
 # url = r"C:\Users\Denny\Desktop\封面测试"
@@ -58,7 +58,7 @@ def 有码不行(有码待删除路径):
                         f"{time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())}  下载失败: {番号信息}\n")
                     a.close()
 
-            # time.sleep(1)
+            time.sleep(random.randint(3, 6))
         print("======================操作完成============================")
         print(f"保存路径:{url}")
 
@@ -87,7 +87,7 @@ def 有码可以(有码筛选路径):
             # print(番号信息)
             # print(番号数据_清洗)
             if isinstance(番号信息, dict):
-                下载封面.保存图片(番号信息, os.path.join(url, '有码'), 番号数据_清洗)
+                下载封面.保存图片(番号信息, os.path.join(url, 'HadBeenBackup'), 番号数据_清洗)
 
                 count += 1
                 print(f'进度{count}/{data["num"]}')
@@ -105,7 +105,7 @@ def 有码可以(有码筛选路径):
                         f"{time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())}  下载失败: {番号信息}\n")
                     a.close()
 
-            # time.sleep(1)
+            time.sleep(random.randint(3, 6))
         print("======================操作完成============================")
         print(f"保存路径:{url}")
 
