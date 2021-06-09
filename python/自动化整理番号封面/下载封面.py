@@ -130,6 +130,7 @@ def 番号搜索(番号):
         # print(f"发行商:{发行商}")
         # # print(f"类别:{类别}")
         # print(f"演员:{演员}")
+        
     except AttributeError:
         print(f'下载失败: {番号}!!!!!!!!!!!!!!!!!!!')
         return 番号
